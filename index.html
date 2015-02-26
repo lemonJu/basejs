@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="dist/basejs.min.js" id="bjsElement"></script>
+</head>
+<body>
+	<div id="test">Hello Basejs</div>
+	<script>
+		basejs.config({
+		    modules : "./samples/css",
+		    callback : function(css) {
+		    	var test = document.getElementById("test");
+		    	css.setCss(test, {
+		    		"fontSize": "25px",
+		    		"color": "#474747"
+		    	})
+		    }
+		});
+	</script>
+</body>
+</html>
